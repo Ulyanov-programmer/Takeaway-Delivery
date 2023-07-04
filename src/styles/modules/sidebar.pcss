@@ -1,0 +1,75 @@
+:root {
+  --hiddenSidebarWidth: 400px;
+}
+
+.sidebar {
+  z-index: 3;
+  position: fixed;
+  top: var(--scroll-padding-top);
+  width: var(--hiddenSidebarWidth);
+  background: var(--bg);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+  padding: 5px;
+  height: calc(100vh - var(--scroll-padding-top));
+  overflow-y: scroll;
+
+  transition: all 0.5s ease;
+
+  /* ? from left to right */
+  /* right: 100vw;
+  &.active {
+    right: calc(100vw - var(--hiddenSidebarWidth));
+  } */
+
+  /* ? from right to left */
+  left: 100vw;
+  &.active {
+    left: calc(100vw - var(--hiddenSidebarWidth));
+  }
+
+  @media (--isTablet) {
+    --hiddenSidebarWidth: 300px;
+  }
+  @media (--isMobile) {
+    --hiddenSidebarWidth: 100vw;
+    &.active {
+      left: 0;
+    }
+  }
+
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: row;
+  /* size of a block in this container */
+  /* grid-auto-rows: 50%; */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  > * {
+    scroll-snap-align: start;
+  }
+}
+
+.cart-swipe-area {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5vw;
+  user-select: none;
+
+  height: 100vh;
+
+  @media (--sidebarIsHidden) {
+    display: none;
+  }
+  @media (--isTablet) {
+    width: 15vw;
+  }
+  @media (--isMobile) {
+    width: 15vw;
+  }
+  &.active {
+    width: 100vw;
+  }
+}

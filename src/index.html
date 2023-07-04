@@ -1,0 +1,397 @@
+<x-layout title='Takeaway & Delivery'
+  sidebar='true'
+  animateByScroll='true'
+  swipe='true'
+  horizontalScroll='false'
+  autoScrollPadding='true'
+  stepByStep='false'
+  swiper='true'
+  tabs='true'>
+
+  <push name='styles'>
+    <link rel='stylesheet' href='./styles/index.css'>
+  </push>
+  <push name='scripts'>
+    <script src='./scripts/generalScript.js' defer></script>
+  </push>
+
+
+  <fill:header></fill:header>
+
+  <section class='section section_hero _centred-container _content-block'>
+    <div class='section__main-content'>
+      <h1 tabindex='0' class='section__title section__title_blacked animated-element' data-animated-title>Beautiful food & takeaway, <br> <span class="section__decor-title-text">delivered</span> to
+        your door.</h1>
+      <p class="section__text animated-element" data-animated-text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the
+        1500.</p>
+      <a href='#' class="section__ref active-element animated-element" data-animated-button>Place an Order</a>
+
+      <div class='section__reviews about-us-reviews animated-element' data-animated-block>
+        <div class="about-us-reviews__trustpilot">
+          <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.3448 9.56882H16.2798L13.1814 0L10.069 9.56882L0 9.55087L8.13992 15.4716L5.02352 25.0404L13.1634 19.1197L21.3033 25.0404L18.2049 15.4716L26.3448 9.56882Z" fill="#00B67A" />
+          </svg>
+          Trustpilot
+        </div>
+        <p class="about-us-reviews__text">
+          <a href='#' class="about-us-reviews__colored-text">4.8 out of 5</a>
+          based on 2000+ reviews
+        </p>
+      </div>
+    </div>
+
+    <div class='section__decor-image _contain-img animated-element' data-animated-decor>
+      <img src='./img/hero-image.png' alt='hero image'>
+    </div>
+  </section>
+
+  <section class='section section_blue-bg _centred-container _content-block'>
+    <div class='section__main-content section__main-content_decorated'>
+      <h2 tabindex='0' class='section__title animated-element' data-animated-title>The home of fresh products</h2>
+      <p class="section__text animated-element" data-animated-text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the
+        1500.</p>
+      <a href='#' class="section__ref active-element animated-element" data-animated-button>Learn about us</a>
+
+      <img class='section__two-block-decor decor-image' alt='' src='img/hero-image-2-decor.png' loading='lazy'>
+    </div>
+
+    <div class='section__decor-image _contain-img'>
+      <img src='./img/hero-image-2.png' alt='hero image 2' loading='lazy'>
+    </div>
+  </section>
+
+  <section class='section section_vertical _centred-container _content-block'>
+    <h2 tabindex='0' class='section__title _centred-title animated-element' data-animated-title>How it works</h2>
+
+    <div class='swiper steps__slider animated-element' data-animated-block>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          <article class='step-block'>
+            <div class="step-block__image _contain-img">
+              <img src='img/how-it-works/step1.png' loading='lazy' alt='Block 1'>
+            </div>
+
+            <h3 class="step-block__title">Adapt your menu items</h3>
+            <p class="step-block__text">
+              Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+            </p>
+          </article>
+        </div>
+        <div class='swiper-slide'>
+          <article class='step-block'>
+            <div class="step-block__image _contain-img">
+              <img src='img/how-it-works/step2.png' loading='lazy' alt='Block 1'>
+            </div>
+
+            <h3 class="step-block__title">Adapt your menu items</h3>
+            <p class="step-block__text">
+              Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+            </p>
+          </article>
+        </div>
+        <div class='swiper-slide'>
+          <article class='step-block'>
+            <div class="step-block__image _contain-img">
+              <img src='img/how-it-works/step3.png' loading='lazy' alt='Block 1'>
+            </div>
+
+            <h3 class="step-block__title">Adapt your menu items</h3>
+            <p class="step-block__text">
+              Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='section section_vertical section_blue-bg _centred-container _content-block'>
+    <div class='section__main-content section__main-content_decorated'>
+      <h2 tabindex='0' class='section__title'>Browse our menu</h2>
+
+      <div class='tabs-menu tabs-menu__buttons'>
+        <button data-toggle-elem-number='0' type='button' class='tabs-menu__button active-element active-element_transparent'>Burgers</button>
+        <button data-toggle-elem-number='1' type='button' class='tabs-menu__button active-element active-element_transparent'>Sides</button>
+        <button data-toggle-elem-number='2' type='button' class='tabs-menu__button active-element active-element_transparent'>Drinks</button>
+      </div>
+    </div>
+
+    <div class='tabs-menu__items'>
+      <section class='tabs-menu__item'>
+        <div class='swiper menu-slider__slider' id='menu-slider-1'>
+          <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger Dreams</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger Dreams</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger Dreams</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger Dreams</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class='swiper-scrollbar menu-slider__slider-scrollbar'></div>
+      </section>
+
+      <section class='tabs-menu__item'>
+        <div class='swiper menu-slider__slider' id='menu-slider-2'>
+          <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 3</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 3</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 3</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 3</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class='swiper-scrollbar menu-slider__slider-scrollbar menu-slider__slider-scrollbar_2'></div>
+      </section>
+
+      <section class='tabs-menu__item'>
+        <div class='swiper menu-slider__slider' id='menu-slider-3'>
+          <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 5</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 5</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+            <div class='swiper-slide'>
+              <article class='burger-card'>
+                <div class="burger-card__preview _contain-img">
+                  <img src='img/burger.png' loading='lazy' alt='burger 1'>
+                </div>
+
+                <p class="burger-card__title">Burger 5</p>
+                <p class="burger-card__price">$ 9.20 USD</p>
+                <p class="burger-card__about">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+
+                <footer class="burger-card__footer">
+                  <input class='burger-card__counter active-element active-element_transparent active-element_minified' type='number' step='1' min='0' name='count' value='0'>
+                  <button type='button' class='burger-card__add-button active-element active-element_black-color active-element_minified'>Add to card</button>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class='swiper-scrollbar menu-slider__slider-scrollbar menu-slider__slider-scrollbar_3'></div>
+      </section>
+    </div>
+  </section>
+
+  <section class='section section_reverse _centred-container _content-block'>
+    <div class='section__decor-image _contain-img'>
+      <img class='' src='img/hero-image-3.png' alt='hero-image-3' loading='lazy'>
+    </div>
+
+    <div class='section__main-content section__main-content_decorated'>
+      <h2 tabindex='0' class='section__title animated-element' data-animated-title='reverse'>Order online with our simple checkout.</h2>
+      <p class="section__text animated-element" data-animated-text='reverse'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever
+        since the
+        1500.</p>
+      <a href='#' class="section__ref active-element animated-element" data-animated-button>See our FAQ</a>
+    </div>
+  </section>
+
+  <section class='section section_blue-bg _centred-container _content-block'>
+    <div class='section__main-content section__main-content_decorated'>
+      <h2 tabindex='0' class='section__title animated-element' data-animated-title="">Call our store and takeaway when it suits you best.</h2>
+      <p class="section__text animated-element" data-animated-text="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the 1500.</p>
+      <a href='tel:+88005553535' class="section__ref active-element animated-element" data-animated-button="">Ph. +61 233 2333</a>
+    </div>
+
+    <div class='section__decor-image _contain-img'>
+      <img src='./img/hero-image-4.png' alt='hero image 4' loading='lazy'>
+    </div>
+  </section>
+
+  <section class='section section_end-block _centred-container _content-block'>
+    <!-- <div class='section__decor-image _cover-img'>
+      <img class='' src='img/hero-image-end.png' alt='hero-image-end' loading='lazy'>
+    </div> -->
+
+    <div class='section__main-content section__main-content_padding section__main-content_blue-bg section__main-content_decorated'>
+      <h2 tabindex='0' class='section__title section__title_white-text'>
+        <span class='section__title_black-blue-text'>Support</span>
+        good food
+        and local business.
+      </h2>
+      <a href='#' class="section__ref active-element animated-element active-element_white-bg" data-animated-button="">Order Now</a>
+
+      <div class='section__decor-image decor-image section__end-block-decor _contain-img'>
+        <img src='./img/end-block-main-content-decor.svg' alt='' loading='lazy'>
+      </div>
+    </div>
+  </section>
+
+  <fill:footer></fill:footer>
+</x-layout>

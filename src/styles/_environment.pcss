@@ -1,0 +1,31 @@
+$layoutWidth: 1440px;
+$minLayoutWidth: 320px;
+$mainFontSize: 18px;
+$minFontSize: 14px;
+
+@custom-media --isLargeLayout (width > $layoutWidth);
+@custom-media --isLayoutWidth (768px <= width <= $layoutWidth);
+@custom-media --isTablet (426px <= width <= 769px);
+@custom-media --isMobile (width <= 426px);
+
+@define-mixin size $width, $height: $width {
+  width: $width;
+  height: $height;
+}
+@define-mixin hide {
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+@define-mixin show {
+  overflow: auto;
+  opacity: 1;
+  pointer-events: all;
+}
+@define-mixin inset $position, $top: "", $right: "", $bottom: "", $left: "" {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

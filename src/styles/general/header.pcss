@@ -1,0 +1,151 @@
+.header {
+  $mobileNavmenuWidth: 600px;
+  $miniHeaderWidth: 650px;
+  z-index: 15;
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+
+  &__body {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: pxToVw(25, $layoutWidth) 0;
+
+    @media (width < $mobileNavmenuWidth) {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 20px;
+      align-content: stretch;
+    }
+
+    @media (height < $miniHeaderWidth) {
+      padding: 7px 0;
+    }
+  }
+
+  &__important-section {
+    position: relative;
+    background: var(--important-bg-color);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    overflow: hidden;
+
+    @media (--isTablet) {
+      font-size: 12px;
+    }
+
+    .top-left-wave {
+      left: 0;
+      height: 100%;
+    }
+    .top-right-wave {
+      right: 0;
+      height: 100%;
+    }
+    @media (height < $miniHeaderWidth) {
+      padding: 5px 0;
+      font-size: 12px;
+    }
+  }
+
+  &__important-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  &__important-span {
+  }
+
+  &__important-ref {
+    color: white;
+  }
+}
+.navmenu {
+  &__body {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+
+    @media (width < $mobileNavmenuWidth) {
+      display: grid;
+      gap: 10px;
+      grid-auto-flow: column;
+      /* size of a block in this container */
+      grid-auto-columns: auto;
+      overflow-x: scroll;
+    }
+
+    li {
+      a,
+      button {
+        display: inline-block;
+
+        padding: 8px;
+        color: inherit;
+        transition: all 0.2s ease 0s;
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: #35b8be;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  z-index: 10;
+  margin-right: auto;
+
+  @media (width < $mobileNavmenuWidth) {
+    img {
+      width: 75%;
+      height: 75%;
+    }
+  }
+  @media (height < $miniHeaderWidth) {
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+}
+.cart-button {
+  position: relative;
+  margin-left: calc(8 * 2px);
+
+  @media (width < $mobileNavmenuWidth) {
+    img {
+      width: 75%;
+      height: 75%;
+    }
+  }
+  @media (height < $miniHeaderWidth) {
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &:after {
+    @mixin inset absolute, -10%, -10%;
+    background: white;
+    box-shadow: 7px 7px 25px rgba(126, 130, 143, 0.27);
+    border-radius: 50%;
+    padding: 4px 4px;
+    min-width: 1.5em;
+    color: var(--important-text-c);
+    aspect-ratio: 1 / 1;
+    content: attr(data-items-count);
+
+    @media (height < $miniHeaderWidth) {
+      right: -10px;
+      top: -10px;
+      font-size: 12px;
+    }
+  }
+}
