@@ -1,0 +1,222 @@
+:root {
+    --main-font-family: Inter;
+    --text-c: #546285;
+    --text-secold-c: #08090a;
+    --important-text-c: #35b8be;
+    --important-bg-color: #35b8be;
+    --important-active-bg-color: #1ecbd4;
+    --blue-bg: #f5fbfc;
+    --bg: white;
+    --scroll-padding-top: 140px;
+    --big-viewport-content-inline-padding: 10vw;
+    --default-viewport-content-inline-padding: 5vw;
+    --tablet-viewport-content-inline-padding: 5vw;
+    --mobile-viewport-content-inline-padding: 2.5vw;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-padding: var(--scroll-padding-top);
+}
+
+html section {
+    scroll-snap-align: start;
+}
+
+html footer {
+    scroll-snap-align: start;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(203, 203, 203) transparent;
+    scrollbar-width: thin;
+}
+/* colors, button / track (FIREFOX) */
+/* 'auto' or 'thin' for size of a scrollbar (FIREFOX) */
+html::-webkit-scrollbar {
+    /* width and height of a scrollbar */
+    width: 13px;
+    height: auto;
+}
+
+html::-webkit-scrollbar-track {
+    /* track color */
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    /* padding size border color */
+    border: 3px solid var(--bg);
+    /* rounding of button */
+    border-radius: 7px;
+    /* button color */
+    background: rgb(203, 203, 203);
+}
+
+@media (min-width: 1441px) {
+    ._centred-container {
+        padding-inline: var(--big-viewport-content-inline-padding)
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    ._centred-container {
+        padding-inline: var(--default-viewport-content-inline-padding)
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    ._centred-container {
+        padding-inline: var(--tablet-viewport-content-inline-padding)
+    }
+}
+
+@media (max-width: 426px) {
+    ._centred-container {
+        padding-inline: var(--mobile-viewport-content-inline-padding)
+    }
+}
+
+body {
+    height: -moz-max-content;
+    height: max-content;
+    background: var(--bg);
+    color: var(--text-c);
+    font-size: clamp(
+    0.875rem,
+    calc(18 * 100vw / 1440),
+    1.125rem
+  );
+    font-family: var(--main-font-family);
+    letter-spacing: 0.36px;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    text-wrap: balance;
+}
+
+._contain-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+._cover-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+._thin {
+    font-weight: 100;
+}
+
+._extra-light {
+    font-weight: 200;
+}
+
+._light {
+    font-weight: 300;
+}
+
+._medium {
+    font-weight: 500;
+}
+
+._semi-bold {
+    font-weight: 600;
+}
+
+._bold {
+    font-weight: 700;
+}
+
+._extra-bold {
+    font-weight: 800;
+}
+
+._black {
+    font-weight: 900;
+}
+
+._important-text {
+    color: #35b8be;
+}
+
+.decor-image {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+._uppercase {
+    text-transform: uppercase;
+}
+
+._content-block {
+    padding-block: 30px;
+    height: calc(100vh - var(--scroll-padding-top));
+}
+
+._centred-title {
+    text-align: center;
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    ._out-of-content-container_mobile {
+        margin-inline: calc(
+        0.001px - var(--tablet-viewport-content-inline-padding)
+      )
+    }
+}
+
+@media (max-width: 426px) {
+    ._out-of-content-container_mobile {
+        margin-inline: calc(
+        0.001px - var(--mobile-viewport-content-inline-padding)
+      )
+    }
+}
+
+@media (min-width: 1441px) {
+    ._out-of-content-container_all-devices {
+        margin-inline: calc(0.001px - var(--big-viewport-content-inline-padding))
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    ._out-of-content-container_all-devices {
+        margin-inline: calc(
+        0.001px - var(--default-viewport-content-inline-padding)
+      )
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    ._out-of-content-container_all-devices {
+        margin-inline: calc(
+        0.001px - var(--tablet-viewport-content-inline-padding)
+      )
+    }
+}
+
+@media (max-width: 426px) {
+    ._out-of-content-container_all-devices {
+        margin-inline: calc(
+        0.001px - var(--mobile-viewport-content-inline-padding)
+      )
+    }
+}

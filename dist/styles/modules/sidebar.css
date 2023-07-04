@@ -1,0 +1,90 @@
+:root {
+    --hiddenSidebarWidth: 400px;
+}
+
+.sidebar {
+    z-index: 3;
+    position: fixed;
+    top: var(--scroll-padding-top);
+    width: var(--hiddenSidebarWidth);
+    background: var(--bg);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    height: calc(100vh - var(--scroll-padding-top));
+    overflow-y: scroll;
+    transition: all 0.5s ease;
+  /* ? from left to right */
+  /* right: 100vw;
+  &.active {
+    right: calc(100vw - var(--hiddenSidebarWidth));
+  } */
+  /* ? from right to left */
+    left: 100vw;
+}
+
+.sidebar.active {
+    left: calc(100vw - var(--hiddenSidebarWidth));
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    .sidebar {
+        --hiddenSidebarWidth: 300px
+    }
+}
+
+@media (max-width: 426px) {
+    .sidebar {
+        --hiddenSidebarWidth: 100vw
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+.sidebar {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: row;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+/* size of a block in this container */
+/* grid-auto-rows: 50%; */
+.sidebar > * {
+    scroll-snap-align: start;
+}
+
+.cart-swipe-area {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 100vh;
+}
+
+@media (--sidebarIsHidden) {
+    .cart-swipe-area {
+        display: none
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    .cart-swipe-area {
+        width: 15vw
+    }
+}
+
+@media (max-width: 426px) {
+    .cart-swipe-area {
+        width: 15vw
+    }
+}
+
+.cart-swipe-area.active {
+    width: 100vw;
+}

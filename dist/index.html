@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+    <!-- Disables forced link for phone number on iOS -->
+    <meta content="telephone=no" name="format-detection">
+    <meta content="description" name="description">
+    <meta content="#000000" name="theme-color">
+    <link href="./img/favicon.svg" rel="icon">
+    <link color="#000000" href="./img/favicon.svg" rel="mask-icon">
+    <!-- <link rel='apple-touch-icon' href='apple-touch-icon.png'> -->
+    <!-- <link rel='manifest' href='manifest.json'> -->
+    <link as="font" crossorigin="" href="./fonts/Inter-VariableFont_slnt,wght.woff2" rel="preload" type="font/woff2">
+    <!--
+SEO
+<meta name='keywords' content='keyword1,'>
+<meta name='Author' content='Author'>
+<meta name='Copyright' content='Copyright'>
+<meta name='Address' content='Address'>
+<! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->
+<meta http-equiv='refresh' content='seconds; url = URL'>
+Facebook
+<! - site localization, for the Russian-language site ru_RU ->
+<meta property='og:locale' content='ru_RU'>
+<! - content type, default is article ->
+<meta property='og:type' content='article'>
+<! - the title of the page that will be displayed in the post of the social network ->
+<meta property='og:title' content='META tags'>
+<! - page description ->
+<meta property='og:description' content='Description of the page about META tags'>
+<! - link to the image that will be published in the post ->
+<meta property='og:image' content='path'>
+<! - link to the current page ->
+<meta property='og: url' content='path'>
+<! - site name ->
+<meta property='og:site_name' content='Freelancer for life'>
+Twitter
+<! - Map type, default is summary ->
+<meta name='twitter: card' content='summary'>
+<! - Author name / login ->
+<meta name='twitter: site' content='Ivan'>
+<! - Page title ->
+<meta name='twitter: title' content='META tags'>
+<! - Page description ->
+<meta name='twitter: description' content='about META tags'>
+<! - Link to image ->
+<meta name='twitter: image' content='path'>
+-->
+    <title>Takeaway &amp; Delivery</title>
+    <!-- /-/ General stylesheets -->
+    <link href="./styles/general/nullStyle.css?_v=20230704134114" rel="stylesheet">
+    <link href="./styles/general/fonts.css?_v=20230704134114" rel="stylesheet">
+    <link href="./styles/general/header.css?_v=20230704134114" rel="stylesheet">
+    <link href="./styles/general/footer.css?_v=20230704134114" rel="stylesheet">
+    <link href="./styles/general/general.css?_v=20230704134114" rel="stylesheet">
+    <!-- /-/ General scripts -->
+    <!-- Swiper -->
+    <link href="./libs/swiper/swiper-bundle.min.css?_v=20230704134114" rel="stylesheet">
+    <script src="./scripts/sliders.js?_v=20230704134114" type="module"></script>
+    <!-- Sidebar -->
+    <script src="./scripts/sidebar.js?_v=20230704134114" type="module"></script>
+    <link href="./styles/modules/sidebar.css?_v=20230704134114" rel="stylesheet">
+    <!-- Animate by scroll -->
+    <script src="./scripts/animateByScroll.js?_v=20230704134114" type="module"></script>
+    <!-- Swipe -->
+    <script src="./scripts/swipe.js?_v=20230704134114" type="module"></script>
+    <!-- Scroll to element -->
+    <script src="./scripts/autoScrollPadding.js?_v=20230704134114" type="module"></script>
+    <!-- Tabs -->
+    <script src="./scripts/tab.js?_v=20230704134114" type="module"></script>
+    <!-- /-/ Other stylesheets and scripts for this page -->
+    <link href="./styles/index.css?_v=20230704134114" rel="stylesheet">
+    <script defer src="./scripts/generalScript.js?_v=20230704134114"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__important-section">
+        <div class="header__important-container _centred-container">
+          <p class="header__important-span">We're open and available for takeaway & delivery.</p>
+          <a class="header__important-ref" href="#" rel="noopener noreferrer" target="_self">Order Now</a>
+          <img alt="" class="decor-image top-left-wave" height="48" src="img/icons/background_wave-left.svg" width="329">
+          <img alt="" class="decor-image top-right-wave" height="48" src="img/icons/background_wave-right.svg" width="496">
+        </div>
+      </section>
+      <div class="header__body _centred-container">
+        <a class="logo" href="index.html">
+          <img alt="logo" height="51" src="img/Logo.svg" width="40">
+        </a>
+        <nav class="navmenu _cover-img">
+          <ul class="navmenu__body">
+            <li>
+              <a class="active" href="#" rel="noopener" target="_blank">Home</a>
+            </li>
+            <li>
+              <a class="" href="#" rel="noopener" target="_blank">Order</a>
+            </li>
+            <li>
+              <a class="" href="#" rel="noopener" target="_blank">Company</a>
+            </li>
+            <li>
+              <a class="" href="#" rel="noopener" target="_blank">FAQ</a>
+            </li>
+            <li>
+              <a class="" href="#" rel="noopener" target="_blank">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button aria-label="Your cart" class="cart-button" data-items-count="10" data-toggle-sidebar-id="cart-list" type="button">
+          <img alt="cart icon" height="55" src="img/icons/cart.svg" width="55">
+        </button>
+      </div>
+    </header>
+    <aside class="cart-list sidebar" id="cart-list">
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+      <article class="burger-card burger-card_mini">
+        <div class="burger-card__preview _contain-img">
+          <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+        </div>
+        <p class="burger-card__title">Burger Dreams</p>
+        <p class="burger-card__price">$ 9.20 USD</p>
+        <footer class="burger-card__footer">
+          <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="1" name="counter" step="1" type="number" value="1">
+          <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Remove</button>
+        </footer>
+      </article>
+    </aside>
+    <div class="cart-swipe-area" data-swipe-element="#cart-list"></div>
+    <main>
+      <section class="section section_hero _centred-container _content-block">
+        <div class="section__main-content">
+          <h1 class="section__title section__title_blacked animated-element" data-animated-title="" tabindex="0">
+            Beautiful food & takeaway,
+            <br>
+            <span class="section__decor-title-text">delivered</span>
+            to
+        your door.
+          </h1>
+          <p class="section__text animated-element" data-animated-text="">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the
+        1500.
+          </p>
+          <a class="section__ref active-element animated-element" data-animated-button="" href="#">Place an Order</a>
+          <div class="section__reviews about-us-reviews animated-element" data-animated-block="">
+            <div class="about-us-reviews__trustpilot">
+              <svg fill="none" height="26" viewbox="0 0 27 26" width="27" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.3448 9.56882H16.2798L13.1814 0L10.069 9.56882L0 9.55087L8.13992 15.4716L5.02352 25.0404L13.1634 19.1197L21.3033 25.0404L18.2049 15.4716L26.3448 9.56882Z" fill="#00B67A"></path>
+              </svg>
+              Trustpilot
+            </div>
+            <p class="about-us-reviews__text">
+              <a class="about-us-reviews__colored-text" href="#">4.8 out of 5</a>
+              based on 2000+ reviews
+            </p>
+          </div>
+        </div>
+        <div class="section__decor-image _contain-img animated-element" data-animated-decor="">
+          <picture><source srcset="./img/hero-image.avif" type="image/avif"><source srcset="./img/hero-image.webp" type="image/webp"><img alt="hero image" height="2320" src="./img/hero-image.png" width="2400"></picture>
+        </div>
+      </section>
+      <section class="section section_blue-bg _centred-container _content-block">
+        <div class="section__main-content section__main-content_decorated">
+          <h2 class="section__title animated-element" data-animated-title="" tabindex="0">The home of fresh products</h2>
+          <p class="section__text animated-element" data-animated-text="">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the
+        1500.
+          </p>
+          <a class="section__ref active-element animated-element" data-animated-button="" href="#">Learn about us</a>
+          <picture><source srcset="img/hero-image-2-decor.avif" type="image/avif"><source srcset="img/hero-image-2-decor.webp" type="image/webp"><img alt="" class="section__two-block-decor decor-image" height="1228" loading="lazy" src="img/hero-image-2-decor.png" width="1156"></picture>
+        </div>
+        <div class="section__decor-image _contain-img">
+          <picture><source srcset="./img/hero-image-2.avif" type="image/avif"><source srcset="./img/hero-image-2.webp" type="image/webp"><img alt="hero image 2" height="2456" loading="lazy" src="./img/hero-image-2.png" width="2092"></picture>
+        </div>
+      </section>
+      <section class="section section_vertical _centred-container _content-block">
+        <h2 class="section__title _centred-title animated-element" data-animated-title="" tabindex="0">How it works</h2>
+        <div class="swiper steps__slider animated-element" data-animated-block="">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="step-block">
+                <div class="step-block__image _contain-img">
+                  <picture><source srcset="img/how-it-works/step1.avif" type="image/avif"><source srcset="img/how-it-works/step1.webp" type="image/webp"><img alt="Block 1" height="534" loading="lazy" src="img/how-it-works/step1.png" width="666"></picture>
+                </div>
+                <h3 class="step-block__title">Adapt your menu items</h3>
+                <p class="step-block__text">
+                  Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+                </p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="step-block">
+                <div class="step-block__image _contain-img">
+                  <picture><source srcset="img/how-it-works/step2.avif" type="image/avif"><source srcset="img/how-it-works/step2.webp" type="image/webp"><img alt="Block 1" height="534" loading="lazy" src="img/how-it-works/step2.png" width="666"></picture>
+                </div>
+                <h3 class="step-block__title">Adapt your menu items</h3>
+                <p class="step-block__text">
+                  Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+                </p>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="step-block">
+                <div class="step-block__image _contain-img">
+                  <picture><source srcset="img/how-it-works/step3.avif" type="image/avif"><source srcset="img/how-it-works/step3.webp" type="image/webp"><img alt="Block 1" height="534" loading="lazy" src="img/how-it-works/step3.png" width="666"></picture>
+                </div>
+                <h3 class="step-block__title">Adapt your menu items</h3>
+                <p class="step-block__text">
+                  Easily adapt your menu using the webflow CMS and allow customers to browse your items.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section_vertical section_blue-bg _centred-container _content-block">
+        <div class="section__main-content section__main-content_decorated">
+          <h2 class="section__title" tabindex="0">Browse our menu</h2>
+          <div class="tabs-menu tabs-menu__buttons">
+            <button class="tabs-menu__button active-element active-element_transparent" data-toggle-elem-number="0" type="button">Burgers</button>
+            <button class="tabs-menu__button active-element active-element_transparent" data-toggle-elem-number="1" type="button">Sides</button>
+            <button class="tabs-menu__button active-element active-element_transparent" data-toggle-elem-number="2" type="button">Drinks</button>
+          </div>
+        </div>
+        <div class="tabs-menu__items">
+          <section class="tabs-menu__item">
+            <div class="swiper menu-slider__slider" id="menu-slider-1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger Dreams</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger Dreams</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger Dreams</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger Dreams</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar menu-slider__slider-scrollbar"></div>
+          </section>
+          <section class="tabs-menu__item">
+            <div class="swiper menu-slider__slider" id="menu-slider-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 3</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 3</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 3</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 3</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar menu-slider__slider-scrollbar menu-slider__slider-scrollbar_2"></div>
+          </section>
+          <section class="tabs-menu__item">
+            <div class="swiper menu-slider__slider" id="menu-slider-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 5</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 5</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="burger-card">
+                    <div class="burger-card__preview _contain-img">
+                      <picture><source srcset="img/burger.avif" type="image/avif"><source srcset="img/burger.webp" type="image/webp"><img alt="burger 1" height="120" loading="lazy" src="img/burger.png" width="120"></picture>
+                    </div>
+                    <p class="burger-card__title">Burger 5</p>
+                    <p class="burger-card__price">$ 9.20 USD</p>
+                    <p class="burger-card__about">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <footer class="burger-card__footer">
+                      <input class="burger-card__counter active-element active-element_transparent active-element_minified" min="0" name="count" step="1" type="number" value="0">
+                      <button class="burger-card__add-button active-element active-element_black-color active-element_minified" type="button">Add to card</button>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar menu-slider__slider-scrollbar menu-slider__slider-scrollbar_3"></div>
+          </section>
+        </div>
+      </section>
+      <section class="section section_reverse _centred-container _content-block">
+        <div class="section__decor-image _contain-img">
+          <picture><source srcset="img/hero-image-3.avif" type="image/avif"><source srcset="img/hero-image-3.webp" type="image/webp"><img alt="hero-image-3" class="" height="1172" loading="lazy" src="img/hero-image-3.png" width="1156"></picture>
+        </div>
+        <div class="section__main-content section__main-content_decorated">
+          <h2 class="section__title animated-element" data-animated-title="reverse" tabindex="0">Order online with our simple checkout.</h2>
+          <p class="section__text animated-element" data-animated-text="reverse">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever
+        since the
+        1500.
+          </p>
+          <a class="section__ref active-element animated-element" data-animated-button="" href="#">See our FAQ</a>
+        </div>
+      </section>
+      <section class="section section_blue-bg _centred-container _content-block">
+        <div class="section__main-content section__main-content_decorated">
+          <h2 class="section__title animated-element" data-animated-title="" tabindex="0">Call our store and takeaway when it suits you best.</h2>
+          <p class="section__text animated-element" data-animated-text="">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the 1500.
+          </p>
+          <a class="section__ref active-element animated-element" data-animated-button="" href="tel:+88005553535">Ph. +61 233 2333</a>
+        </div>
+        <div class="section__decor-image _contain-img">
+          <picture><source srcset="./img/hero-image-4.avif" type="image/avif"><source srcset="./img/hero-image-4.webp" type="image/webp"><img alt="hero image 4" height="1134" loading="lazy" src="./img/hero-image-4.png" width="1054"></picture>
+        </div>
+      </section>
+      <section class="section section_end-block _centred-container _content-block">
+        <!--
+<div class='section__decor-image _cover-img'>
+<img class='' src='img/hero-image-end.png' alt='hero-image-end' loading='lazy'>
+</div>
+-->
+        <div class="section__main-content section__main-content_padding section__main-content_blue-bg section__main-content_decorated">
+          <h2 class="section__title section__title_white-text" tabindex="0">
+            <span class="section__title_black-blue-text">Support</span>
+            good food
+        and local business.
+          </h2>
+          <a class="section__ref active-element animated-element active-element_white-bg" data-animated-button="" href="#">Order Now</a>
+          <div class="section__decor-image decor-image section__end-block-decor _contain-img">
+            <img alt="" height="579" loading="lazy" src="./img/end-block-main-content-decor.svg" width="711">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer _centred-container">
+      <img alt="" class="footer__bg-image" height="454" loading="lazy" src="img/footer-bg-pattern.svg" width="1042">
+      <div class="footer__top">
+        <section class="footer__about">
+          <a class="logo" href="index.html" loading="lazy">
+            <div class="_contain-img">
+              <img alt="logo" height="51" src="img/Logo.svg" width="40">
+            </div>
+          </a>
+          <p>
+            Takeaway & Delivery template
+            <br>
+            for small - medium businesses.
+          </p>
+        </section>
+        <nav class="nav-list">
+          <span class="nav-list__title _uppercase">Company</span>
+          <ul class="nav-list__list">
+            <li class="nav-list__li">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">Order</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">FAQ</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-list">
+          <span class="nav-list__title _uppercase">TEMPLATE</span>
+          <ul class="nav-list__list">
+            <li class="nav-list__li">
+              <a href="#">Style Guide</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">Changelog</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">License</a>
+            </li>
+            <li class="nav-list__li">
+              <a href="#">Webflow University</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-list">
+          <span class="nav-list__title _uppercase">FLOW BASE</span>
+          <ul class="nav-list__list">
+            <li class="nav-list__li">
+              <a href="#">More Moveables</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__determiner"></div>
+      <div class="footer__bottom">
+        <section class="creator-info">
+          <p>
+            Builded by
+            <span class="creator-info__span">Ulyanov Ivan</span>
+          </p>
+          <p>
+            Powered by
+            <a class="creator-info__span creator-info__ref" href="https://github.com/Ulyanov-programmer/gulp_multitool">gulp_multitool</a>
+          </p>
+        </section>
+        <div class="footer__socials">
+          <a aria-label="we on instagram" class="footer__social-item" href="#">
+            <img alt="we on instagram" height="18" loading="lazy" src="img/socials/instagram.svg" width="18">
+          </a>
+          <a aria-label="we on twitter" class="footer__social-item" href="#">
+            <img alt="we on twitter" height="15" loading="lazy" src="img/socials/twitter.svg" width="18">
+          </a>
+          <a aria-label="we on youtube" class="footer__social-item" href="#">
+            <img alt="we on youtube" height="13" loading="lazy" src="img/socials/youtube.svg" width="18">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html><!-- Made in Russia, with ❤, by Ivan Ulyanov. -->
