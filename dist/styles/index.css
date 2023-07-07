@@ -47,7 +47,7 @@
 .section_end-block {
     grid-template-columns: 1fr;
     gap: 20px;
-    height: 50svh;
+    height: 50lvh;
 }
 
 @media (max-width: 600px) {
